@@ -1,0 +1,153 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 5,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "lazy",
+    "tamper_frac": 0.1,
+    "ledger": "sim",
+    "non_iid": null,
+    "no_audit": true,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": false,
+    "quiet": false,
+    "out": "results/demo_lazy_noaudit.json"
+  },
+  "backend": "liboqs 0.15.0",
+  "keygen_ms_per_client": 0.21140224998816848,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.1125,
+      "f1": 0.06431207169214549,
+      "sign_ms_mean": 0.5667596249736562,
+      "gateway_verify_agg_ms": 4.194237000092471,
+      "audit_build_ms": 0.3757129998120945,
+      "audit_verify_ms": 0.021151000055397162,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 50000000000000000,
+        "pool": 4900000000000000000,
+        "device_credit": 50000000000000000
+      }
+    },
+    {
+      "round": 2,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.116,
+      "f1": 0.07240293809024134,
+      "sign_ms_mean": 0.5841190000239749,
+      "gateway_verify_agg_ms": 4.260561000137386,
+      "audit_build_ms": 0.31609500001650304,
+      "audit_verify_ms": 0.015299000097002136,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 100000000000000000,
+        "pool": 4800000000000000000,
+        "device_credit": 100000000000000000
+      }
+    },
+    {
+      "round": 3,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.122,
+      "f1": 0.07481559536354057,
+      "sign_ms_mean": 0.6721138749981037,
+      "gateway_verify_agg_ms": 4.589275999933307,
+      "audit_build_ms": 0.32228899999608984,
+      "audit_verify_ms": 0.012379999816403142,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 150000000000000000,
+        "pool": 4700000000000000000,
+        "device_credit": 150000000000000000
+      }
+    },
+    {
+      "round": 4,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.1265,
+      "f1": 0.07810026385224274,
+      "sign_ms_mean": 0.6273417500040068,
+      "gateway_verify_agg_ms": 4.851578999932826,
+      "audit_build_ms": 0.3427909998663381,
+      "audit_verify_ms": 0.011318000133542228,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 200000000000000000,
+        "pool": 4600000000000000000,
+        "device_credit": 200000000000000000
+      }
+    },
+    {
+      "round": 5,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.132,
+      "f1": 0.08535300316122234,
+      "sign_ms_mean": 0.540819999997666,
+      "gateway_verify_agg_ms": 4.287517999955526,
+      "audit_build_ms": 0.3562269998838019,
+      "audit_verify_ms": 0.012876000027972623,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 250000000000000000,
+        "pool": 4500000000000000000,
+        "device_credit": 250000000000000000
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 10000000000000000000,
+    "locked": 0,
+    "credit": 250000000000000000,
+    "pool": 4500000000000000000,
+    "device_credit": 250000000000000000
+  }
+}

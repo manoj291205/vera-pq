@@ -1,0 +1,107 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 3,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "honest",
+    "tamper_frac": 0.1,
+    "ledger": "evm",
+    "non_iid": null,
+    "no_audit": false,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": false,
+    "quiet": false,
+    "out": "results/demo_evm.json"
+  },
+  "backend": "liboqs 0.15.0",
+  "keygen_ms_per_client": 54.47563774998798,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.885,
+      "f1": 0.8557089084065245,
+      "sign_ms_mean": 0.6388137500721314,
+      "gateway_verify_agg_ms": 4.686578000018926,
+      "audit_build_ms": 0.4248170000664686,
+      "audit_verify_ms": 450.68512900002133,
+      "audit_gas": 1530079,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 50000000000000000,
+        "pool": 4900000000000000000,
+        "device_credit": 50000000000000000
+      }
+    },
+    {
+      "round": 2,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.8935,
+      "f1": 0.865615141955836,
+      "sign_ms_mean": 0.6500487500318286,
+      "gateway_verify_agg_ms": 4.530336000016177,
+      "audit_build_ms": 0.43131500001436507,
+      "audit_verify_ms": 436.91795199993066,
+      "audit_gas": 1400943,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 100000000000000000,
+        "pool": 4800000000000000000,
+        "device_credit": 100000000000000000
+      }
+    },
+    {
+      "round": 3,
+      "accepted": true,
+      "failed_sample": null,
+      "rejected_clients": [],
+      "acc": 0.8985,
+      "f1": 0.8711111111111111,
+      "sign_ms_mean": 0.5582718750360982,
+      "gateway_verify_agg_ms": 4.374249999955282,
+      "audit_build_ms": 0.3686070001549524,
+      "audit_verify_ms": 430.92764599987277,
+      "audit_gas": 1384919,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 10000000000000000000,
+        "locked": 0,
+        "credit": 150000000000000000,
+        "pool": 4700000000000000000,
+        "device_credit": 150000000000000000
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 10000000000000000000,
+    "locked": 0,
+    "credit": 150000000000000000,
+    "pool": 4700000000000000000,
+    "device_credit": 150000000000000000
+  }
+}

@@ -1,0 +1,102 @@
+== 1. Honest gateway, 2/8 poisoned clients: every round ACCEPTED, gateway + devices earn ETH ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=sim
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=ACCEPT acc=0.885 f1=0.856 sign=0.7ms gw=4.7ms build=0.4ms verify=5.6ms
+          stake=10.000 ETH  gateway earned=0.050  devices earned=0.050  pool=4.900
+[round 2] audit=ACCEPT acc=0.893 f1=0.866 sign=0.7ms gw=4.6ms build=0.5ms verify=5.3ms
+          stake=10.000 ETH  gateway earned=0.100  devices earned=0.100  pool=4.800
+[round 3] audit=ACCEPT acc=0.898 f1=0.871 sign=0.6ms gw=4.5ms build=0.4ms verify=5.3ms
+          stake=10.000 ETH  gateway earned=0.150  devices earned=0.150  pool=4.700
+[round 4] audit=ACCEPT acc=0.905 f1=0.879 sign=0.6ms gw=4.7ms build=0.3ms verify=5.4ms
+          stake=10.000 ETH  gateway earned=0.200  devices earned=0.200  pool=4.600
+[round 5] audit=ACCEPT acc=0.906 f1=0.880 sign=0.6ms gw=4.8ms build=0.3ms verify=5.4ms
+          stake=10.000 ETH  gateway earned=0.250  devices earned=0.250  pool=4.500
+[econ] gateway stake 10.000 -> 10.000 ETH (slashed 0.000), gateway rewards 0.250 ETH, device rewards 0.250 ETH
+[done] wrote results/demo_honest.json
+== 2. Lazy gateway (plain mean) WITHOUT audit: poisoned model accepted AND the cheater is paid ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=sim
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=ACCEPT acc=0.113 f1=0.064 sign=0.6ms gw=4.2ms build=0.4ms verify=0.0ms
+          stake=10.000 ETH  gateway earned=0.050  devices earned=0.050  pool=4.900
+[round 2] audit=ACCEPT acc=0.116 f1=0.072 sign=0.6ms gw=4.3ms build=0.3ms verify=0.0ms
+          stake=10.000 ETH  gateway earned=0.100  devices earned=0.100  pool=4.800
+[round 3] audit=ACCEPT acc=0.122 f1=0.075 sign=0.7ms gw=4.6ms build=0.3ms verify=0.0ms
+          stake=10.000 ETH  gateway earned=0.150  devices earned=0.150  pool=4.700
+[round 4] audit=ACCEPT acc=0.127 f1=0.078 sign=0.6ms gw=4.9ms build=0.3ms verify=0.0ms
+          stake=10.000 ETH  gateway earned=0.200  devices earned=0.200  pool=4.600
+[round 5] audit=ACCEPT acc=0.132 f1=0.085 sign=0.5ms gw=4.3ms build=0.4ms verify=0.0ms
+          stake=10.000 ETH  gateway earned=0.250  devices earned=0.250  pool=4.500
+[econ] gateway stake 10.000 -> 10.000 ETH (slashed 0.000), gateway rewards 0.250 ETH, device rewards 0.250 ETH
+[done] wrote results/demo_lazy_noaudit.json
+== 3. Lazy gateway WITH audit: rounds REJECTED, 1 ETH bond slashed per round ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=sim
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.6ms gw=4.4ms build=0.3ms verify=0.7ms
+          stake=9.000 ETH  gateway earned=0.000  devices earned=0.000  pool=6.000
+[round 2] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.6ms gw=4.2ms build=0.3ms verify=0.6ms
+          stake=8.000 ETH  gateway earned=0.000  devices earned=0.000  pool=7.000
+[round 3] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.6ms gw=4.2ms build=0.4ms verify=0.6ms
+          stake=7.000 ETH  gateway earned=0.000  devices earned=0.000  pool=8.000
+[round 4] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.5ms gw=4.5ms build=0.3ms verify=0.7ms
+          stake=6.000 ETH  gateway earned=0.000  devices earned=0.000  pool=9.000
+[round 5] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.7ms gw=6.4ms build=0.3ms verify=0.6ms
+          stake=5.000 ETH  gateway earned=0.000  devices earned=0.000  pool=10.000
+[econ] gateway stake 10.000 -> 5.000 ETH (slashed 5.000), gateway rewards 0.000 ETH, device rewards 0.000 ETH
+[done] wrote results/demo_lazy_audit.json
+== 4. Tampering gateway (10% coords) WITH audit ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=sim
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=REJECT(sample 7) acc=0.389 f1=0.560 sign=0.6ms gw=5.1ms build=0.3ms verify=2.8ms
+          stake=9.000 ETH  gateway earned=0.000  devices earned=0.000  pool=6.000
+[round 2] audit=REJECT(sample 2) acc=0.389 f1=0.560 sign=0.6ms gw=4.4ms build=0.3ms verify=1.4ms
+          stake=8.000 ETH  gateway earned=0.000  devices earned=0.000  pool=7.000
+[round 3] audit=REJECT(sample 1) acc=0.389 f1=0.560 sign=0.6ms gw=4.6ms build=0.4ms verify=1.0ms
+          stake=7.000 ETH  gateway earned=0.000  devices earned=0.000  pool=8.000
+[round 4] audit=REJECT(sample 1) acc=0.389 f1=0.560 sign=0.6ms gw=4.5ms build=0.3ms verify=1.0ms
+          stake=6.000 ETH  gateway earned=0.000  devices earned=0.000  pool=9.000
+[round 5] audit=REJECT(sample 10) acc=0.389 f1=0.560 sign=0.5ms gw=4.2ms build=0.3ms verify=3.6ms
+          stake=5.000 ETH  gateway earned=0.000  devices earned=0.000  pool=10.000
+[econ] gateway stake 10.000 -> 5.000 ETH (slashed 5.000), gateway rewards 0.000 ETH, device rewards 0.000 ETH
+[done] wrote results/demo_tamper.json
+== 5. Gateway refuses to answer the challenge: a keeper expires the round, earns a 10% bounty ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=sim
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=EXPIRED (keeper slashed bond) acc=0.389 f1=0.560 sign=0.6ms gw=4.4ms build=0.3ms verify=1.4ms
+          stake=9.000 ETH  gateway earned=0.000  devices earned=0.000  pool=5.900  keeper bounty=0.100
+[round 2] audit=EXPIRED (keeper slashed bond) acc=0.389 f1=0.560 sign=0.6ms gw=4.5ms build=0.3ms verify=1.4ms
+          stake=8.000 ETH  gateway earned=0.000  devices earned=0.000  pool=6.800  keeper bounty=0.200
+[round 3] audit=EXPIRED (keeper slashed bond) acc=0.389 f1=0.560 sign=0.6ms gw=4.3ms build=0.3ms verify=1.4ms
+          stake=7.000 ETH  gateway earned=0.000  devices earned=0.000  pool=7.700  keeper bounty=0.300
+[econ] gateway stake 10.000 -> 7.000 ETH (slashed 3.000), gateway rewards 0.000 ETH, device rewards 0.000 ETH
+[done] wrote results/demo_withhold.json
+== 6. Same flow on in-process EVM (real ETH balances, real gas) ==
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=evm
+[setup] contract deployed, gas=1648709
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=ACCEPT acc=0.885 f1=0.856 sign=0.6ms gw=4.7ms build=0.4ms verify=450.7ms gas=1530079
+          stake=10.000 ETH  gateway earned=0.050  devices earned=0.050  pool=4.900
+[round 2] audit=ACCEPT acc=0.893 f1=0.866 sign=0.7ms gw=4.5ms build=0.4ms verify=436.9ms gas=1400943
+          stake=10.000 ETH  gateway earned=0.100  devices earned=0.100  pool=4.800
+[round 3] audit=ACCEPT acc=0.898 f1=0.871 sign=0.6ms gw=4.4ms build=0.4ms verify=430.9ms gas=1384919
+          stake=10.000 ETH  gateway earned=0.150  devices earned=0.150  pool=4.700
+[econ] gateway stake 10.000 -> 10.000 ETH (slashed 0.000), gateway rewards 0.150 ETH, device rewards 0.150 ETH
+[done] wrote results/demo_evm.json
+[setup] PQ backend=liboqs 0.15.0 alg=ML-DSA-44 keccak=pycryptodome ledger=evm
+[setup] contract deployed, gas=1648709
+[econ] gateway stake=10.000 ETH, bond/round=1.0 ETH, reward/round=0.1 ETH, reward pool=5.000 ETH
+[round 1] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.7ms gw=4.4ms build=0.4ms verify=114.5ms gas=1256820
+          stake=9.000 ETH  gateway earned=0.000  devices earned=0.000  pool=6.000
+[round 2] audit=REJECT(sample 0) acc=0.389 f1=0.560 sign=0.5ms gw=4.6ms build=0.4ms verify=111.9ms gas=1233840
+          stake=8.000 ETH  gateway earned=0.000  devices earned=0.000  pool=7.000
+[econ] gateway stake 10.000 -> 8.000 ETH (slashed 2.000), gateway rewards 0.000 ETH, device rewards 0.000 ETH
+[done] wrote results/demo_evm_slash.json
+PASS test_honest_accepts
+PASS test_full_tamper_rejected
+PASS test_forged_signature_dropped
+PASS test_substituted_value_reverts
+PASS test_values_not_matching_signed_root_dropped
+PASS test_sig_spotcheck_detects_forged_client
+PASS test_honest_round_pays_gateway_and_devices
+PASS test_cheating_round_slashes_bond
+PASS test_withheld_round_expires_with_keeper_bounty
+PASS test_commit_needs_unbonded_stake

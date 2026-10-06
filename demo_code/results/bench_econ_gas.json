@@ -1,0 +1,9 @@
+{
+  "deploy": 1648709,
+  "depositStake": 45251,
+  "fundRewards": 43890,
+  "audit_rejected_slash": 1254030,
+  "expire_with_bounty": 66271,
+  "claim": 28566,
+  "commit_with_bond": 149021
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "n": 4,
+    "dim": 32,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 267810,
+    "commit_gas": 149033,
+    "calldata_est": 6528
+  },
+  {
+    "n": 4,
+    "dim": 32,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 746374,
+    "commit_gas": 149033,
+    "calldata_est": 23424
+  },
+  {
+    "n": 4,
+    "dim": 32,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 1394670,
+    "commit_gas": 149033,
+    "calldata_est": 45952
+  },
+  {
+    "n": 4,
+    "dim": 1024,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 362684,
+    "commit_gas": 149021,
+    "calldata_est": 9728
+  },
+  {
+    "n": 4,
+    "dim": 1024,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 1218560,
+    "commit_gas": 149033,
+    "calldata_est": 36224
+  },
+  {
+    "n": 4,
+    "dim": 1024,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 2408380,
+    "commit_gas": 149033,
+    "calldata_est": 71552
+  },
+  {
+    "n": 8,
+    "dim": 32,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 478195,
+    "commit_gas": 149033,
+    "calldata_est": 11776
+  },
+  {
+    "n": 8,
+    "dim": 32,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 1385665,
+    "commit_gas": 149033,
+    "calldata_est": 40960
+  },
+  {
+    "n": 8,
+    "dim": 32,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 2632978,
+    "commit_gas": 149033,
+    "calldata_est": 79872
+  },
+  {
+    "n": 8,
+    "dim": 1024,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 645295,
+    "commit_gas": 149033,
+    "calldata_est": 17536
+  },
+  {
+    "n": 8,
+    "dim": 1024,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 2187510,
+    "commit_gas": 149033,
+    "calldata_est": 64000
+  },
+  {
+    "n": 8,
+    "dim": 1024,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 4272670,
+    "commit_gas": 149033,
+    "calldata_est": 125952
+  },
+  {
+    "n": 16,
+    "dim": 32,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 954715,
+    "commit_gas": 149033,
+    "calldata_est": 22528
+  },
+  {
+    "n": 16,
+    "dim": 32,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 2876171,
+    "commit_gas": 149033,
+    "calldata_est": 76288
+  },
+  {
+    "n": 16,
+    "dim": 32,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 5530331,
+    "commit_gas": 149021,
+    "calldata_est": 147968
+  },
+  {
+    "n": 16,
+    "dim": 1024,
+    "k": 4,
+    "accepted": true,
+    "audit_gas": 1266329,
+    "commit_gas": 149033,
+    "calldata_est": 33408
+  },
+  {
+    "n": 16,
+    "dim": 1024,
+    "k": 16,
+    "accepted": true,
+    "audit_gas": 4201301,
+    "commit_gas": 149033,
+    "calldata_est": 119808
+  },
+  {
+    "n": 16,
+    "dim": 1024,
+    "k": 32,
+    "accepted": true,
+    "audit_gas": 8458497,
+    "commit_gas": 149009,
+    "calldata_est": 235008
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 5,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "lazy",
+    "tamper_frac": 0.1,
+    "ledger": "sim",
+    "non_iid": null,
+    "no_audit": false,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": false,
+    "quiet": false,
+    "out": "results/demo_lazy_audit.json"
+  },
+  "backend": "liboqs 0.15.0",
+  "keygen_ms_per_client": 0.20447700001113844,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5600750000382959,
+      "gateway_verify_agg_ms": 4.40742500018132,
+      "audit_build_ms": 0.32452799996463,
+      "audit_verify_ms": 0.7222429999274027,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 9000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 6000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 2,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.6130926249738877,
+      "gateway_verify_agg_ms": 4.189624999980879,
+      "audit_build_ms": 0.30879999985700124,
+      "audit_verify_ms": 0.62737999996898,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 8000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 7000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 3,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.558795499983944,
+      "gateway_verify_agg_ms": 4.220865999968737,
+      "audit_build_ms": 0.3624080000008689,
+      "audit_verify_ms": 0.5806619999475515,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 7000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 8000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 4,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5115321250457328,
+      "gateway_verify_agg_ms": 4.466610999998011,
+      "audit_build_ms": 0.2916060000188736,
+      "audit_verify_ms": 0.667893999889202,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 6000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 9000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 5,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.7395374999532578,
+      "gateway_verify_agg_ms": 6.44450599997981,
+      "audit_build_ms": 0.33081199990192545,
+      "audit_verify_ms": 0.6468760000188922,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 5000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 10000000000000000000,
+        "device_credit": 0
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 5000000000000000000,
+    "locked": 0,
+    "credit": 0,
+    "pool": 10000000000000000000,
+    "device_credit": 0
+  }
+}

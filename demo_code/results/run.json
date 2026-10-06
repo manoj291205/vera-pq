@@ -1,0 +1,84 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 2,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "lazy",
+    "tamper_frac": 0.1,
+    "ledger": "evm",
+    "non_iid": null,
+    "no_audit": false,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": false,
+    "quiet": false,
+    "out": "results/run.json"
+  },
+  "backend": "dilithium-py (pure Python)",
+  "keygen_ms_per_client": 55.478362512076274,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 36.23446254641749,
+      "gateway_verify_agg_ms": 62.07520002499223,
+      "audit_build_ms": 0.3451998345553875,
+      "audit_verify_ms": 106.52299993671477,
+      "audit_gas": 1245810,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 9000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 6000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 2,
+      "accepted": false,
+      "failed_sample": 0,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 24.237875040853396,
+      "gateway_verify_agg_ms": 63.215000089257956,
+      "audit_build_ms": 0.3279000520706177,
+      "audit_verify_ms": 101.7832001671195,
+      "audit_gas": 1247310,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 8000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 7000000000000000000,
+        "device_credit": 0
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 8000000000000000000,
+    "locked": 0,
+    "credit": 0,
+    "pool": 7000000000000000000,
+    "device_credit": 0
+  }
+}

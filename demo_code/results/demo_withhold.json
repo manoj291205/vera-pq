@@ -1,0 +1,107 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 3,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "lazy",
+    "tamper_frac": 0.1,
+    "ledger": "sim",
+    "non_iid": null,
+    "no_audit": false,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": true,
+    "quiet": false,
+    "out": "results/demo_withhold.json"
+  },
+  "backend": "liboqs 0.15.0",
+  "keygen_ms_per_client": 0.21846674999892457,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": false,
+      "failed_sample": "expired",
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5718978750337556,
+      "gateway_verify_agg_ms": 4.430818999935582,
+      "audit_build_ms": 0.31945899991114857,
+      "audit_verify_ms": 1.4483919999292993,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 9000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 5900000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 2,
+      "accepted": false,
+      "failed_sample": "expired",
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.60622962502066,
+      "gateway_verify_agg_ms": 4.539586000191775,
+      "audit_build_ms": 0.3360959999554325,
+      "audit_verify_ms": 1.4389440000286413,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 8000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 6800000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 3,
+      "accepted": false,
+      "failed_sample": "expired",
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5608203750000484,
+      "gateway_verify_agg_ms": 4.269367000006241,
+      "audit_build_ms": 0.3169330000218906,
+      "audit_verify_ms": 1.4231669999844598,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 7000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 7700000000000000000,
+        "device_credit": 0
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 7000000000000000000,
+    "locked": 0,
+    "credit": 0,
+    "pool": 7700000000000000000,
+    "device_credit": 0
+  }
+}

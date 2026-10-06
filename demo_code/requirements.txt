@@ -1,0 +1,12 @@
+# Core (pure-Python path, always works)
+numpy>=1.26
+scikit-learn>=1.4
+dilithium-py>=1.4        # pure-Python FIPS 204 ML-DSA fallback
+pycryptodome>=3.20       # Keccak-256 (EVM-compatible hashing)
+# Optional fast PQC backend (needs native liboqs; see README)
+liboqs-python>=0.14
+# Optional EVM path (in-process chain, real gas numbers)
+web3>=7
+eth-tester[py-evm]>=0.12.0b1
+# Optional (only if you later wrap the client loop in Flower)
+flwr>=1.20

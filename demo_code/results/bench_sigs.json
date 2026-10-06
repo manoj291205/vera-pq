@@ -1,0 +1,56 @@
+[
+  {
+    "alg": "ML-DSA-44",
+    "backend": "liboqs",
+    "pk": 1312,
+    "sig": 2420,
+    "keygen_ms": 0.058272999922337476,
+    "sign_ms": 0.061347000155365095,
+    "verify_ms": 0.025694999976622057
+  },
+  {
+    "alg": "ML-DSA-65",
+    "backend": "liboqs",
+    "pk": 1952,
+    "sig": 3309,
+    "keygen_ms": 0.04013100010524795,
+    "sign_ms": 0.06899200002408179,
+    "verify_ms": 0.03568450006241619
+  },
+  {
+    "alg": "Falcon-512",
+    "backend": "liboqs",
+    "pk": 897,
+    "sig": 654,
+    "keygen_ms": 7.538760500210628,
+    "sign_ms": 0.25688499999887426,
+    "verify_ms": 0.048447999915879336
+  },
+  {
+    "alg": "SPHINCS+-SHA2-128f-simple",
+    "backend": "liboqs",
+    "pk": 32,
+    "sig": 17088,
+    "keygen_ms": 0.3709430000071734,
+    "sign_ms": 10.285798000040813,
+    "verify_ms": 1.1905145001946948
+  },
+  {
+    "alg": "ML-DSA-44",
+    "backend": "dilithium-py",
+    "pk": 1312,
+    "sig": 2420,
+    "keygen_ms": null,
+    "sign_ms": 34.96598699985043,
+    "verify_ms": 12.65307500034396
+  },
+  {
+    "alg": "ECDSA-secp256k1 (classical baseline)",
+    "backend": "cryptography",
+    "pk": 64,
+    "sig": 64,
+    "keygen_ms": null,
+    "sign_ms": 0.416188999906808,
+    "verify_ms": 0.4054035000535805
+  }
+]

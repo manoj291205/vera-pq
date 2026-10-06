@@ -1,0 +1,153 @@
+{
+  "config": {
+    "clients": 8,
+    "malicious": 2,
+    "attack": "signflip",
+    "rounds": 5,
+    "features": 30,
+    "trim": 2,
+    "k": 16,
+    "gateway": "tamper",
+    "tamper_frac": 0.1,
+    "ledger": "sim",
+    "non_iid": null,
+    "no_audit": false,
+    "seed": 7,
+    "csv": null,
+    "label_col": "Attack_label",
+    "normal_value": null,
+    "bond": 1.0,
+    "reward": 0.1,
+    "deposit": 10.0,
+    "pool": 5.0,
+    "withhold": false,
+    "quiet": false,
+    "out": "results/demo_tamper.json"
+  },
+  "backend": "liboqs 0.15.0",
+  "keygen_ms_per_client": 0.2128456249863575,
+  "rounds": [
+    {
+      "round": 1,
+      "accepted": false,
+      "failed_sample": 7,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5766140000105224,
+      "gateway_verify_agg_ms": 5.06643000016993,
+      "audit_build_ms": 0.32168699999601813,
+      "audit_verify_ms": 2.757026999915979,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 9000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 6000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 2,
+      "accepted": false,
+      "failed_sample": 2,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5643412499694023,
+      "gateway_verify_agg_ms": 4.397094000069046,
+      "audit_build_ms": 0.31558399996356457,
+      "audit_verify_ms": 1.4007380000293779,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 8000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 7000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 3,
+      "accepted": false,
+      "failed_sample": 1,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5601292500045929,
+      "gateway_verify_agg_ms": 4.6030600001358835,
+      "audit_build_ms": 0.35453899999993155,
+      "audit_verify_ms": 0.9864840001228004,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 7000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 8000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 4,
+      "accepted": false,
+      "failed_sample": 1,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5926575000216872,
+      "gateway_verify_agg_ms": 4.495711999879859,
+      "audit_build_ms": 0.2891720000661735,
+      "audit_verify_ms": 0.9598290000667475,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 6000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 9000000000000000000,
+        "device_credit": 0
+      }
+    },
+    {
+      "round": 5,
+      "accepted": false,
+      "failed_sample": 10,
+      "rejected_clients": [],
+      "acc": 0.389,
+      "f1": 0.5601151907847373,
+      "sign_ms_mean": 0.5343250000180433,
+      "gateway_verify_agg_ms": 4.23821999993379,
+      "audit_build_ms": 0.3000279998559563,
+      "audit_verify_ms": 3.575670999907743,
+      "audit_gas": null,
+      "audit_calldata_bytes_est": 40960,
+      "sig_bytes": 2420,
+      "pk_bytes": 1312,
+      "econ_wei": {
+        "stake": 5000000000000000000,
+        "locked": 0,
+        "credit": 0,
+        "pool": 10000000000000000000,
+        "device_credit": 0
+      }
+    }
+  ],
+  "econ_final_wei": {
+    "stake": 5000000000000000000,
+    "locked": 0,
+    "credit": 0,
+    "pool": 10000000000000000000,
+    "device_credit": 0
+  }
+}
